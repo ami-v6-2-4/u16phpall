@@ -6,7 +6,10 @@ php:
   - "7.1" #7.1.12
 
 build: 
-
- ci:
+  pre_ci_boot:
+    image_name: drydock/u16phpall
+    image_tag: v6.2.4
+    pull: true
+    
+  ci:
    - php --version
-   
